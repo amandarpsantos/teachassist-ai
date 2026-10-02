@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TeachAssist AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-card">
+    <header class="header">
+      <div class="brand-row">
+        <span class="status-dot"></span>
+        <h1>TeachAssist AI</h1>
+      </div>
+      <div class="header-actions">
+          <span class="version">v0.2.1</span>
+        
+          <button
+            id="closeButton"
+            class="close-button"
+            type="button"
+            aria-label="Close TeachAssist AI"
+            title="Close"
+          >
+            ×
+          </button>
+        </div>
+    </header>
+
+    <section class="body">
+      <button id="recordButton" class="record-button">Loading...</button>
+
+      <div class="divider"></div>
+
+      <h2>Status</h2>
+      <div class="status-grid">
+        <div class="status-label">Recorder</div>
+        <div id="recordingStatus" class="status-value">—</div>
+
+        <div class="status-label">Meeting</div>
+        <div id="meetingStatus" class="status-value">—</div>
+
+        <div class="status-label">Microphone</div>
+        <div id="microphoneStatus" class="status-value">—</div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <footer class="footer-actions">
+        <button id="dashboardButton" class="footer-button" type="button">Open Dashboard</button>
+        <button id="settingsButton" class="footer-button" type="button">Settings</button>
+      </footer>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

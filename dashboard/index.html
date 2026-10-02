@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeachAssist AI – The AI assistant built for language teachers</title>
+    <script type="module" crossorigin src="./assets/index-DACGScwu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DmYV_c43.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      Loaded as plain scripts (not bundled through Vite) so the manual
+      recovery upload can write a picked File straight to the same
+      IndexedDB the recorder uses, in this page's own context, without
+      ever passing the file's bytes through chrome.runtime.sendMessage.
+      See ExtensionDataAdapter.uploadRecoveredRecording().
+    -->
+    <script src="./vendor/lesson-db.js"></script>
+    <script src="./vendor/logging-service.js"></script>
+    <script src="./vendor/artifact-service.js"></script>
+  </body>
+</html>
+

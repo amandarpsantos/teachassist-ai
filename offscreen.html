@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TeachAssist Offscreen Recorder</title>
+</head>
+<body>
+  <!--
+    Loaded so this document can save the finalized recording directly
+    to IndexedDB (for the transcription/dashboard pipeline) without
+    ever sending the audio bytes through chrome.runtime.sendMessage.
+    Same files background.js loads via importScripts() — no
+    chrome.storage or importScripts dependency in any of them, so
+    they're safe to load here as plain scripts. Order matters:
+    artifact-service.js depends on the other two.
+  -->
+  <script src="services/lesson-db.js"></script>
+  <script src="services/recording-chunk-store.js"></script>
+  <script src="services/logging-service.js"></script>
+  <script src="services/artifact-service.js"></script>
+  <script src="offscreen.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Set Up TeachAssist AI</title>
+
+  <link rel="stylesheet" href="setup.css" />
+</head>
+
+<body>
+  <main class="setup-page">
+
+    <header class="setup-header">
+      <img
+        src="icons/app/TeachAssist_Logo_Primary_Light.png"
+        alt="TeachAssist AI"
+        class="brand-banner"
+      />
+    </header>
+
+    <section class="setup-content">
+
+      <div class="setup-heading">
+        <h2>Welcome to TeachAssist AI</h2>
+
+        <p>
+          Before recording your first class, TeachAssist AI
+          needs permission to access your microphone.
+        </p>
+      </div>
+
+      <section class="permission-card">
+        <div class="permission-card-heading">
+          <div>
+            <h3>Microphone Permission</h3>
+
+            <p>
+              This allows TeachAssist AI to record your voice
+              during Google Meet and Microsoft Teams classes.
+            </p>
+          </div>
+
+          <span
+            id="microphonePermissionStatus"
+            class="status-badge neutral"
+          >
+            Checking...
+          </span>
+        </div>
+
+        <div class="privacy-note">
+          <span aria-hidden="true">🔒</span>
+
+          <p>
+            Your microphone is only used while you are actively
+            recording. TeachAssist AI does not record automatically.
+          </p>
+        </div>
+
+        <button
+          id="grantMicrophoneButton"
+          class="primary-button"
+          type="button"
+        >
+          Grant Microphone Permission
+        </button>
+      </section>
+
+      <p
+        id="setupMessage"
+        class="setup-message"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+    </section>
+
+  </main>
+
+  <script src="setup.js"></script>
+</body>
+</html>

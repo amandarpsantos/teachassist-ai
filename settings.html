@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>TeachAssist AI Settings</title>
+
+  <link rel="stylesheet" href="settings.css" />
+</head>
+
+<body>
+  <main class="settings-page">
+
+    <header class="settings-header">
+      <button
+        id="backButton"
+        class="back-button"
+        type="button"
+        aria-label="Return to recorder"
+      >
+        ←
+      </button>
+
+      <div>
+        <h1>Settings</h1>
+        <p>Configure TeachAssist AI</p>
+      </div>
+    </header>
+
+    <!-- Microphone Permission -->
+    <section class="settings-section">
+      <div class="section-heading">
+        <div>
+          <h2>Microphone</h2>
+          <p>Allow TeachAssist to record your voice.</p>
+        </div>
+      </div>
+
+      <div class="setting-row">
+        <div>
+          <span class="setting-label">Permission status</span>
+        </div>
+
+        <span
+          id="microphonePermissionStatus"
+          class="status-badge neutral"
+        >
+          Checking...
+        </span>
+      </div>
+
+      <button
+        id="grantMicrophoneButton"
+        class="secondary-button"
+        type="button"
+      >
+        Grant Permission
+      </button>
+    </section>
+
+    <!-- Transcription Provider -->
+    <section class="settings-section">
+      <div class="section-heading">
+        <div>
+          <h2>Transcription</h2>
+          <p>Choose which service creates class transcripts.</p>
+        </div>
+      </div>
+
+      <label class="field-group" for="transcriptionProvider">
+        <span class="field-label">Provider</span>
+
+        <select id="transcriptionProvider">
+          <option value="deepgram" selected>
+            Deepgram
+          </option>
+
+          <option value="assemblyai">
+            AssemblyAI
+          </option>
+        </select>
+      </label>
+    </section>
+
+    <!-- Recording Retention -->
+    <section class="settings-section">
+      <div class="section-heading">
+        <div>
+          <h2>Recording Retention</h2>
+          <p>Choose what happens to the recording after a lesson is successfully transcribed.</p>
+        </div>
+      </div>
+
+      <label class="field-group" for="recordingRetention">
+        <span class="field-label">After successful transcription</span>
+
+        <select id="recordingRetention">
+          <option value="delete" selected>
+            Delete recording after successful transcription
+          </option>
+
+          <option value="keep_copy">
+            Keep a copy of the recording
+          </option>
+        </select>
+      </label>
+
+      <p id="recordingRetentionDescription" class="field-description">
+        The recording is automatically deleted after the transcript has been successfully saved. This saves storage space and helps protect privacy.
+      </p>
+    </section>
+
+    <!-- API Keys -->
+        <section class="settings-section">
+          <div class="section-heading">
+            <div>
+              <h2>API Keys</h2>
+              <p>Your keys are stored locally in Chrome.</p>
+            </div>
+          </div>
+        
+          <div id="deepgramApiKeyGroup">
+            <label class="field-group" for="deepgramApiKey">
+              <span class="field-label">Deepgram API key</span>
+        
+              <input
+                id="deepgramApiKey"
+                type="password"
+                autocomplete="off"
+                placeholder="Enter Deepgram API key"
+              />
+            </label>
+          </div>
+        
+          <div id="assemblyAiApiKeyGroup" hidden>
+            <label class="field-group" for="assemblyAiApiKey">
+              <span class="field-label">AssemblyAI API key</span>
+        
+              <input
+                id="assemblyAiApiKey"
+                type="password"
+                autocomplete="off"
+                placeholder="Enter AssemblyAI API key"
+              />
+            </label>
+          </div>
+        </section>
+
+    <p
+      id="settingsMessage"
+      class="settings-message"
+      role="status"
+      aria-live="polite"
+    ></p>
+
+    <div class="settings-actions">
+      <button
+        id="saveSettingsButton"
+        class="primary-button"
+        type="button"
+      >
+        Save Settings
+      </button>
+
+      <button
+        id="cancelButton"
+        class="secondary-button"
+        type="button"
+      >
+        Back
+      </button>
+    </div>
+
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>

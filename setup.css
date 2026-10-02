@@ -1,0 +1,189 @@
+:root {
+  --background: #0f172a;
+  --surface: #1e293b;
+  --surface-elevated: #334155;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  --success: #3b9f68;
+  --warning: #f59e0b;
+  --error: #dc2626;
+
+  --border: rgba(255,255,255,.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    "Segoe UI",
+    sans-serif;
+
+  background: var(--background);
+
+  color: var(--text-primary);
+
+  min-width: 420px;
+}
+
+.setup-page {
+  padding: 28px;
+}
+
+.setup-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.brand-banner {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.setup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.setup-heading {
+  text-align: center;
+}
+
+.setup-heading h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.setup-heading p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.permission-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.permission-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.permission-card-heading h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.permission-card-heading p {
+  margin-top: 8px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.status-badge {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.status-badge.neutral {
+  background: #475569;
+}
+
+.status-badge.success {
+  background: var(--success);
+}
+
+.status-badge.warning {
+  background: var(--warning);
+}
+
+.status-badge.error {
+  background: var(--error);
+}
+
+.privacy-note {
+  display: flex;
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  background: rgba(59,130,246,.10);
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.primary-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+}
+
+.primary-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.setup-message {
+  text-align: center;
+
+  min-height: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
