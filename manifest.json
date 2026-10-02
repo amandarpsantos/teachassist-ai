@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "TeachAssist AI Recorder",
   "version": "0.2.8",
-  "description": "TeachAssist AI meeting recorder skeleton for Google Meet and Microsoft Teams.",
+  "description": "Records Google Meet and Teams classes in stereo, transcribes them with Deepgram, and summarizes lessons with Gemini.",
   "permissions": [
     "scripting",
     "tabs",
